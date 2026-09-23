@@ -15,6 +15,7 @@ A SQL exploratory data analysis of real financial statement data for ~225 US pub
 3. **Rank** — Used window functions (`RANK() OVER`, `COUNT() OVER`) to identify the top 10 and bottom 10 companies by market cap, revenue, profit margin, current ratio, and PEG ratio
 4. **Segment** — Used CASE-based segmentation to bucket companies into liquidity status groups (`Liquidity Risk` vs. `Adequate Liquidity`) and compared average market cap and profit margin across them
 5. **Cross-analyze** — Built a derived `net_debt` metric (`totalDebt − totalCash`) via a CTE, then cross-segmented companies by liquidity status and leverage status (`Net Debtor` vs. `Net Cash Position`) to compare average net debt across groups
+6. **Sector comparison** — Grouped companies by `sector` to compare average profit margin, PEG ratio, and current ratio across industries, and identified which industries carried the most liquidity risk
 
 ## Key findings
 - Companies with Adequate Liquidity have higher average profit margins and higher market capitalization than companies at Liquidity Risk
