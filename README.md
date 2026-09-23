@@ -19,6 +19,10 @@ A SQL exploratory data analysis of real financial statement data for ~225 US pub
 ## Key findings
 - Companies with Adequate Liquidity have higher average profit margins and higher market capitalization than companies at Liquidity Risk
 - Companies that have Liqudity Risk and are Net Debtors have the highest average net debt. 
+- The top company in terms of market capitalization is Apple Inc., while the bottom company is Verisk Analytics, Inc.
+- Companies with the highest PEG ratios include Dexcom, Inc., Realty Income Corporation, and Welltower Inc. The companies with the lowest PEG ratios (<1) include Pfizer, Inc. LyondellBasell Industries NV and Baker Hughes Company. 
+- Internet retail is the highest profiting industry, while the lowest profiting industry is Beverages - Wineries & Distilleries.
+- The Utilities industry has the most companies with Liquidity Risk, while Consulting Services have the least companies with Liquidity Risk. 
 
 ## Files
 - `data_loading.sql` — loads data into database

@@ -141,6 +141,25 @@ GROUP BY liquidity_status, leverage_status
 ORDER BY liquidity_status, leverage_status, avg_net_debt;
 
 
+-- Average profitability and valuation by industry
+SELECT industry,
+       COUNT(*) AS num_companies,
+       ROUND(AVG(profitMargins), 3) AS avg_profit_margin,
+       ROUND(AVG(pegRatio), 2) AS avg_peg_ratio,
+       ROUND(AVG(currentRatio), 2) AS avg_current_ratio
+FROM company_financials_raw
+WHERE industry IS NOT NULL
+GROUP BY industry
+ORDER BY avg_profit_margin DESC;
+
+
+-- Which industry has the most Liquidity Risk companies?
+SELECT industry,
+       COUNT(*) AS liquidity_risk_count
+FROM company_financials_raw
+WHERE currentRatio < 1.0
+GROUP BY industry
+ORDER BY liquidity_risk_count DESC;	
 
 
     
